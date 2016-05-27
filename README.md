@@ -5,7 +5,7 @@ The flak.io Project is a microservices sample application.
 
 Before installing and running flak.io sample in a cluster you will need to apply a temporary fix for minutemant.
 ```
-apt-get intall -y jq
+sudo apt-get intall -y jq
 for i in $(curl -sS master.mesos:5050/slaves | jq '.slaves[] | .hostname' | tr -d '"'); do ssh "$i" -oStrictHostKeyChecking=no "sudo sysctl -w net.netfilter.nf_conntrack_tcp_be_liberal=1"; done
 ```
 

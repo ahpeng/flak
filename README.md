@@ -39,3 +39,5 @@ Initialize the order service
 ```
 curl 192.168.3.1:80/order/install
 ```
+
+You should now be able to view the sample application at the public agent FQDN. http://<dnslabel>agents.<location>.cloudapp.azure.com
